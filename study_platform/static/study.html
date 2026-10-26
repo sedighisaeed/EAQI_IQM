@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rating Session</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="card wide">
+  <header class="topbar">
+    <span id="progress-label">0 / 0</span>
+    <div class="progressbar"><div id="progress-fill"></div></div>
+    <span class="muted" id="block-label"></span>
+  </header>
+
+  <section id="trial">
+    <div class="imgwrap"><img id="stim" alt="stimulus" draggable="false"></div>
+    <h2 id="question">How bothersome is the loss of highlight/shadow detail in this image?</h2>
+    <div class="rating-area">
+      <span class="anchor">0<br><small>not at all</small></span>
+      <input type="range" id="slider" min="0" max="100" step="1" value="50">
+      <span class="anchor">100<br><small>extremely</small></span>
+    </div>
+    <div class="score-readout">value: <strong id="slider-val">50</strong></div>
+    <button id="btn-next" class="primary">Next</button>
+    <p class="muted" id="hint">Click the button or press <kbd>Enter</kbd> after rating.</p>
+  </section>
+
+  <section id="end" hidden>
+    <h1>Thank you!</h1>
+    <p>Your responses have been recorded.</p>
+    <p class="muted">Completion code: <strong id="code">—</strong></p>
+  </section>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const pid = localStorage.getItem("eaqi_pid");
+if (!pid) { location.href = "/"; }
+
+let current = null;
+let tShown = 0;
+
+const img = $("#stim"), slider = $("#slider");
+
+function updateLabel() { $("#slider-val").textContent = slider.value; }
+slider.oninput = updateLabel;
+updateLabel();
+
+async function next() {
+  const r = await fetch(`/api/next?p=${encodeURIComponent(pid)}`);
+  const j = await r.json();
+  if (j.done) { return finish(); }
+  current = j;
+  $("#progress-label").textContent = `${j.trial_index + 1} / ${j.n_total}`;
+  $("#progress-fill").style.width =
+      (100 * (j.trial_index + 1) / j.n_total).toFixed(1) + "%";
+  $("#block-label").textContent = j.warmup
+      ? "practice — not analyzed" : (j.is_repeat ? "" : "");
+  slider.value = 50; updateLabel();
+  img.src = j.url + "?t=" + Date.now();
+  tShown = performance.now();
+  $("#btn-next").disabled = true;      // force at least one slider move or 1.5 s
+  setTimeout(() => { $("#btn-next").disabled = false; }, 1500);
+}
+
+$("#btn-next").onclick = submit;
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Enter" && !$("#btn-next").disabled) submit();
+});
+
+async function submit() {
+  if (!current) return;
+  const rt = Math.round(performance.now() - tShown);
+  await fetch("/api/rate", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({
+      participant: pid, base: current.base, cond: current.cond,
+      is_repeat: current.is_repeat, rating: +slider.value,
+      rt_ms: rt, trial_index: current.trial_index, mode: "absolute",
+    })});
+  next();
+}
+
+async function finish() {
+  await fetch("/api/finish", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify({participant: pid})});
+  $("#trial").hidden = true;
+  $("#end").hidden = false;
+  $("#code").textContent = "EAQI-" + pid.toUpperCase();
+}
+
+next();
+</script>
+</body>
+</html>

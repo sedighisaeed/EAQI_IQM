@@ -1,0 +1,29 @@
+{
+  "protocol": {
+    "seed": 0,
+    "epochs": 3,
+    "batch": 16,
+    "lr": 0.0002,
+    "resize": [
+      256,
+      192
+    ],
+    "split": "source-disjoint 70/10/20 (train_koniq.py)",
+    "note": "epochs reduced for the ablation comparison; all variants share the identical budget"
+  },
+  "variants": {
+    "f": {
+      "srcc": 0.6606443314104355,
+      "krcc": 0.47321170568466187,
+      "plcc": 0.7026577650365826,
+      "rmse": 0.13130186803615176,
+      "logistic_params": [
+        0.7931222870908479,
+        0.3708024501644371,
+        0.6256032131251412,
+        0.0636494606116782
+      ],
+      "train_seconds": 748.1
+    }
+  }
+}

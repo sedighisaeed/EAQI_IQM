@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>E-AQI Perceptual Study — Welcome</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="card" id="app">
+
+  <!-- 1. consent -->
+  <section id="step-consent">
+    <h1>Image Quality Study</h1>
+    <p class="muted">Duration ≈ 25–30 minutes &middot; Compensation per your recruitment channel &middot; Anonymous</p>
+
+    <h2>Purpose</h2>
+    <p>You will view photographs on this website and rate how bothersome the
+    <strong>lost highlight/shadow detail</strong> (blown-out or crushed areas) is in each
+    photograph, on a scale from 0 (not at all) to 100 (extremely bothersome).</p>
+
+    <h2>What you must do</h2>
+    <ul>
+      <li>View each image for at least ~2 seconds before answering.</li>
+      <li>Rate your <em>immediate impression</em>; there is no right answer.</li>
+      <li>Complete the session in one sitting, in a quiet place, without zooming.</li>
+    </ul>
+
+    <h2>Voluntary participation</h2>
+    <p>Participation is voluntary. You may stop at any time; your data will then be
+    deleted. No personally identifying information is collected. Data are stored
+    anonymously and used only for scientific analysis of image-quality assessment.</p>
+
+    <h2>Requirements</h2>
+    <ul>
+      <li>Normal or corrected-to-normal vision (glasses/contacts are fine).</li>
+      <li>A display used indoors; avoid direct sunlight on the screen.</li>
+      <li>Viewing distance of roughly 50–70&nbsp;cm (arm's length).</li>
+    </ul>
+
+    <label class="consent-line">
+      <input type="checkbox" id="consent">
+      I have read and understood this information and I consent to participate.
+    </label>
+
+    <h2>Quick vision screening</h2>
+    <p class="muted">This checks that your view of fine detail is adequate for the task.</p>
+    <div class="acuity-box">
+      <div class="acuity-row" id="acuity-row"></div>
+      <p>Which direction are the gaps of the <strong>smallest</strong> band you can
+      clearly distinguish pointing?</p>
+      <div class="btn-row" id="acuity-btns"></div>
+      <p id="acuity-result" class="muted"></p>
+    </div>
+
+    <h2>About you (anonymous)</h2>
+    <div class="grid2">
+      <label>Age
+        <input type="number" id="age" min="18" max="99" value="25">
+      </label>
+      <label>Gender
+        <select id="gender">
+          <option>female</option><option>male</option>
+          <option>other</option><option>undisclosed</option>
+        </select>
+      </label>
+      <label>Do you have normal vision (with correction if needed)?
+        <select id="vision_normal">
+          <option value="yes">yes</option><option value="no">no</option>
+        </select>
+      </label>
+      <label>Experience with photo editing / photography
+        <select id="expertise">
+          <option value="none">none</option>
+          <option value="some">some</option>
+          <option value="professional">professional</option>
+        </select>
+      </label>
+      <label>Primary device
+        <select id="device">
+          <option value="desktop">desktop monitor</option>
+          <option value="laptop">laptop</option>
+          <option value="tablet">tablet</option>
+          <option value="phone">phone</option>
+        </select>
+      </label>
+      <label>Display type
+        <select id="display">
+          <option value="lcd">LCD / LED</option>
+          <option value="oled">OLED</option>
+          <option value="other">other / unsure</option>
+        </select>
+      </label>
+    </div>
+
+    <button id="btn-start" class="primary" disabled>Continue</button>
+    <p id="err" class="error"></p>
+  </section>
+
+  <!-- 2. instructions -->
+  <section id="step-instructions" hidden>
+    <h1>Instructions</h1>
+    <p>You are about to see a series of photographs.</p>
+    <p>For each photograph, ask yourself:</p>
+    <blockquote>“How much does the <strong>loss of detail in bright or dark
+    areas</strong> (pure white or pure black patches where texture is gone)
+    bother me in this image?”</blockquote>
+    <p>Answer with the slider: <strong>0</strong> = not at all bothersome,
+    <strong>100</strong> = extremely bothersome.</p>
+    <div class="scale-demo">
+      <span>0<br>not at all</span>
+      <div class="scale-bar"></div>
+      <span>100<br>extremely</span>
+    </div>
+    <ul>
+      <li>The first <strong>5 images are practice</strong> and are not analyzed.</li>
+      <li>Some images may look very similar — that is intentional; rate each one on its own.</li>
+      <li>Work at a steady pace (~4–6 seconds per image). The whole session takes
+      about 25–30 minutes. You can pause between images (your progress is saved).</li>
+    </ul>
+    <button id="btn-go" class="primary">Start the study</button>
+  </section>
+
+  <!-- 3. done -->
+  <section id="step-done" hidden>
+    <h1>Registration</h1>
+    <p id="done-msg"></p>
+  </section>
+</main>
+
+<script>
+const $ = (s) => document.querySelector(s);
+
+/* ---- acuity mini-test: Landstimilar parallel bands ---- */
+const ROWS = [
+  {w: 6,  gap: 4}, {w: 4, gap: 3}, {w: 3, gap: 2}, {w: 2, gap: 1.4}
+];
+const ANSWER = "up";  // smallest band points up
+let acuityAnswer = null;
+
+function buildAcuity() {
+  const row = $("#acuity-row");
+  ROWS.forEach(r => {
+    const band = document.createElement("div");
+    band.className = "landolt";
+    for (let i = 0; i < 5; i++) {
+      const seg = document.createElement("div");
+      seg.className = "seg";
+      seg.style.width = r.w + "px";
+      seg.style.height = r.w + "px";
+      seg.style.marginRight = r.gap + "px";
+      band.appendChild(seg);
+    }
+    row.appendChild(band);
+  });
+  // rotate last band up
+  row.lastChild.style.transform = "rotate(90deg)";
+  const dirs = ["left", "right", "up", "down"];
+  dirs.forEach(d => {
+    const b = document.createElement("button");
+    b.textContent = {left:"←", right:"→", up:"↑", down:"↓"}[d];
+    b.onclick = () => {
+      acuityAnswer = d;
+      $("#acuity-result").textContent = d === ANSWER
+        ? "OK — screening passed." : "Not OK — please move closer or adjust your screen, then answer again.";
+      validate();
+    };
+    $("#acuity-btns").appendChild(b);
+  });
+}
+
+function validate() {
+  $("#btn-start").disabled = !($("#consent").checked && acuityAnswer === ANSWER);
+}
+
+$("#consent").onchange = validate;
+buildAcuity();
+
+$("#btn-start").onclick = () => {
+  $("#step-consent").hidden = true;
+  $("#step-instructions").hidden = false;
+};
+
+$("#btn-go").onclick = async () => {
+  const payload = {
+    consent: true,
+    acuity_ok: acuityAnswer === ANSWER,
+    age: $("#age").value, gender: $("#gender").value,
+    vision_normal: $("#vision_normal").value,
+    expertise: $("#expertise").value,
+    device: $("#device").value, display: $("#display").value,
+  };
+  const r = await fetch("/api/register", {
+    method: "POST", headers: {"Content-Type": "application/json"},
+    body: JSON.stringify(payload)});
+  const j = await r.json();
+  if (j.participant) {
+    localStorage.setItem("eaqi_pid", j.participant);
+    location.href = "/study";
+  } else {
+    $("#done-msg").textContent = "Registration failed: " + (j.error || "?");
+  }
+};
+</script>
+</body>
+</html>

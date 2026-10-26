@@ -1,0 +1,2163 @@
+{
+  "protocol": {
+    "n_base_target": 180,
+    "gain": 1.35,
+    "edge_detector": "sobel magnitude + otsu, dilation=3",
+    "clip_rule": "selected pixels * gain, saturated at 255",
+    "area_matching": "rank-matched pools (identical clipped value distribution)",
+    "conditions": [
+      "E",
+      "T",
+      "X",
+      "N",
+      "C"
+    ],
+    "rating_scale": "0-100 annoyance/severity",
+    "note": "H1 pair = T vs E (area- and histogram-matched).",
+    "n_base_usable": 126
+  },
+  "stimuli": [
+    {
+      "base": "23080",
+      "files": {
+        "E": "23080_E.jpg",
+        "T": "23080_T.jpg",
+        "X": "23080_X.jpg",
+        "N": "23080_N.jpg",
+        "C": "23080_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.051851995777229425,
+        "clipped_area_frac_T": 0.05124966807209798,
+        "clipped_area_frac_X": 0.05124966807209798,
+        "clipped_area_frac_N": 0.1788783751400574,
+        "edge_band_frac": 0.6677223593111443
+      }
+    },
+    {
+      "base": "239096",
+      "files": {
+        "E": "239096_E.jpg",
+        "T": "239096_T.jpg",
+        "X": "239096_X.jpg",
+        "N": "239096_N.jpg",
+        "C": "239096_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02286902286902287,
+        "clipped_area_frac_T": 0.022642340399349745,
+        "clipped_area_frac_X": 0.022642340399349745,
+        "clipped_area_frac_N": 0.14119079539640286,
+        "edge_band_frac": 0.44686886742961507
+      }
+    },
+    {
+      "base": "65010",
+      "files": {
+        "E": "65010_E.jpg",
+        "T": "65010_T.jpg",
+        "X": "65010_X.jpg",
+        "N": "65010_N.jpg",
+        "C": "65010_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03786892571939301,
+        "clipped_area_frac_T": 0.037804159299486405,
+        "clipped_area_frac_X": 0.037804159299486405,
+        "clipped_area_frac_N": 0.11560805953329317,
+        "edge_band_frac": 0.6029235561945843
+      }
+    },
+    {
+      "base": "299091",
+      "files": {
+        "E": "299091_E.jpg",
+        "T": "299091_T.jpg",
+        "X": "299091_X.jpg",
+        "N": "299091_N.jpg",
+        "C": "299091_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.008037512710409906,
+        "clipped_area_frac_T": 0.007927409796568675,
+        "clipped_area_frac_X": 0.007927409796568675,
+        "clipped_area_frac_N": 0.10670267679613474,
+        "edge_band_frac": 0.5217841853355872
+      }
+    },
+    {
+      "base": "300091",
+      "files": {
+        "E": "300091_E.jpg",
+        "T": "300091_T.jpg",
+        "X": "300091_X.jpg",
+        "N": "300091_N.jpg",
+        "C": "300091_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0012694218301694937,
+        "clipped_area_frac_T": 0.0012176086942442084,
+        "clipped_area_frac_X": 0.0012176086942442084,
+        "clipped_area_frac_N": 0.0788207330263405,
+        "edge_band_frac": 0.43880544815124256
+      }
+    },
+    {
+      "base": "181091",
+      "files": {
+        "E": "181091_E.jpg",
+        "T": "181091_T.jpg",
+        "X": "181091_X.jpg",
+        "N": "181091_N.jpg",
+        "C": "181091_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.1278942493895765,
+        "clipped_area_frac_T": 0.12785538953763254,
+        "clipped_area_frac_X": 0.12785538953763254,
+        "clipped_area_frac_N": 0.3638447937513358,
+        "edge_band_frac": 0.621841827449304
+      }
+    },
+    {
+      "base": "109034",
+      "files": {
+        "E": "109034_E.jpg",
+        "T": "109034_T.jpg",
+        "X": "109034_X.jpg",
+        "N": "109034_N.jpg",
+        "C": "109034_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.020356085776646524,
+        "clipped_area_frac_T": 0.0048704347769768334,
+        "clipped_area_frac_X": 0.0048704347769768334,
+        "clipped_area_frac_N": 0.36997169707450084,
+        "edge_band_frac": 0.9097285639341715
+      }
+    },
+    {
+      "base": "134035",
+      "files": {
+        "E": "134035_E.jpg",
+        "T": "134035_T.jpg",
+        "X": "134035_X.jpg",
+        "N": "134035_N.jpg",
+        "C": "134035_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.009935168813673487,
+        "clipped_area_frac_T": 0.009935168813673487,
+        "clipped_area_frac_X": 0.009935168813673487,
+        "clipped_area_frac_N": 0.13355483448941394,
+        "edge_band_frac": 0.7978704801134707
+      }
+    },
+    {
+      "base": "183087",
+      "files": {
+        "E": "183087_E.jpg",
+        "T": "183087_T.jpg",
+        "X": "183087_X.jpg",
+        "N": "183087_N.jpg",
+        "C": "183087_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.06808893724781576,
+        "clipped_area_frac_T": 0.06863945181702191,
+        "clipped_area_frac_X": 0.06808893724781576,
+        "clipped_area_frac_N": 0.2874074649775584,
+        "edge_band_frac": 0.5576842118898193
+      }
+    },
+    {
+      "base": "368016",
+      "files": {
+        "E": "368016_E.jpg",
+        "T": "368016_T.jpg",
+        "X": "368016_X.jpg",
+        "N": "368016_N.jpg",
+        "C": "368016_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0008549167427672101,
+        "clipped_area_frac_T": 0.0008419634587858887,
+        "clipped_area_frac_X": 0.0008419634587858887,
+        "clipped_area_frac_N": 0.04882092732560022,
+        "edge_band_frac": 0.39238735500417743
+      }
+    },
+    {
+      "base": "14037",
+      "files": {
+        "E": "14037_E.jpg",
+        "T": "14037_T.jpg",
+        "X": "14037_X.jpg",
+        "N": "14037_N.jpg",
+        "C": "14037_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0010038795085524058,
+        "clipped_area_frac_T": 0.0006800474090193717,
+        "clipped_area_frac_X": 0.0006800474090193717,
+        "clipped_area_frac_N": 0.011793965064993103,
+        "edge_band_frac": 0.45766542962804646
+      }
+    },
+    {
+      "base": "239007",
+      "files": {
+        "E": "239007_E.jpg",
+        "T": "239007_T.jpg",
+        "X": "239007_X.jpg",
+        "N": "239007_N.jpg",
+        "C": "239007_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.21176028652664167,
+        "clipped_area_frac_T": 0.2109312763518371,
+        "clipped_area_frac_X": 0.2109312763518371,
+        "clipped_area_frac_N": 0.5543098814126851,
+        "edge_band_frac": 0.6912779062311772
+      }
+    },
+    {
+      "base": "148026",
+      "files": {
+        "E": "148026_E.jpg",
+        "T": "148026_T.jpg",
+        "X": "148026_X.jpg",
+        "N": "148026_N.jpg",
+        "C": "148026_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.030433740714114546,
+        "clipped_area_frac_T": 0.030155245108516138,
+        "clipped_area_frac_X": 0.030155245108516138,
+        "clipped_area_frac_N": 0.2852183599847151,
+        "edge_band_frac": 0.8587055783317465
+      }
+    },
+    {
+      "base": "219090",
+      "files": {
+        "E": "219090_E.jpg",
+        "T": "219090_T.jpg",
+        "X": "219090_X.jpg",
+        "N": "219090_N.jpg",
+        "C": "219090_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.001509057583823939,
+        "clipped_area_frac_T": 0.0012046554102628868,
+        "clipped_area_frac_X": 0.0012046554102628868,
+        "clipped_area_frac_N": 0.05192323883912669,
+        "edge_band_frac": 0.38212187744898024
+      }
+    },
+    {
+      "base": "183055",
+      "files": {
+        "E": "183055_E.jpg",
+        "T": "183055_T.jpg",
+        "X": "183055_X.jpg",
+        "N": "183055_N.jpg",
+        "C": "183055_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0034131903290781796,
+        "clipped_area_frac_T": 0.0031087881555171273,
+        "clipped_area_frac_X": 0.0031087881555171273,
+        "clipped_area_frac_N": 0.07966917312711705,
+        "edge_band_frac": 0.37309991515598995
+      }
+    },
+    {
+      "base": "122048",
+      "files": {
+        "E": "122048_E.jpg",
+        "T": "122048_T.jpg",
+        "X": "122048_X.jpg",
+        "N": "122048_N.jpg",
+        "C": "122048_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.024630669490482576,
+        "clipped_area_frac_T": 0.022357368151760676,
+        "clipped_area_frac_X": 0.022357368151760676,
+        "clipped_area_frac_N": 0.10155374641355949,
+        "edge_band_frac": 0.38830059390807053
+      }
+    },
+    {
+      "base": "182053",
+      "files": {
+        "E": "182053_E.jpg",
+        "T": "182053_T.jpg",
+        "X": "182053_X.jpg",
+        "N": "182053_N.jpg",
+        "C": "182053_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.009714962985991024,
+        "clipped_area_frac_T": 0.008309531674017656,
+        "clipped_area_frac_X": 0.008309531674017656,
+        "clipped_area_frac_N": 0.11341895454044987,
+        "edge_band_frac": 0.5889145795687851
+      }
+    },
+    {
+      "base": "291000",
+      "files": {
+        "E": "291000_E.jpg",
+        "T": "291000_T.jpg",
+        "X": "291000_X.jpg",
+        "N": "291000_N.jpg",
+        "C": "291000_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.004261630429854729,
+        "clipped_area_frac_T": 0.003873031910415088,
+        "clipped_area_frac_X": 0.003873031910415088,
+        "clipped_area_frac_N": 0.37714133975816216,
+        "edge_band_frac": 0.9622282239104669
+      }
+    },
+    {
+      "base": "292066",
+      "files": {
+        "E": "292066_E.jpg",
+        "T": "292066_T.jpg",
+        "X": "292066_X.jpg",
+        "N": "292066_N.jpg",
+        "C": "292066_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.020576291604328986,
+        "clipped_area_frac_T": 0.056359738602729255,
+        "clipped_area_frac_X": 0.020576291604328986,
+        "clipped_area_frac_N": 0.11376869320794554,
+        "edge_band_frac": 0.8360697145743875
+      }
+    },
+    {
+      "base": "78004",
+      "files": {
+        "E": "78004_E.jpg",
+        "T": "78004_T.jpg",
+        "X": "78004_X.jpg",
+        "N": "78004_N.jpg",
+        "C": "78004_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.07399563474329829,
+        "clipped_area_frac_T": 0.07540106605527166,
+        "clipped_area_frac_X": 0.07399563474329829,
+        "clipped_area_frac_N": 0.24121605430016646,
+        "edge_band_frac": 0.5676971004073808
+      }
+    },
+    {
+      "base": "198004",
+      "files": {
+        "E": "198004_E.jpg",
+        "T": "198004_T.jpg",
+        "X": "198004_X.jpg",
+        "N": "198004_N.jpg",
+        "C": "198004_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.1091961839625391,
+        "clipped_area_frac_T": 0.10978555838368922,
+        "clipped_area_frac_X": 0.1091961839625391,
+        "clipped_area_frac_N": 0.5257478902338716,
+        "edge_band_frac": 0.48317692242925886
+      }
+    },
+    {
+      "base": "118035",
+      "files": {
+        "E": "118035_E.jpg",
+        "T": "118035_T.jpg",
+        "X": "118035_X.jpg",
+        "N": "118035_N.jpg",
+        "C": "118035_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.15878783168502794,
+        "clipped_area_frac_T": 0.16222045194007811,
+        "clipped_area_frac_X": 0.15878783168502794,
+        "clipped_area_frac_N": 0.4455476324635203,
+        "edge_band_frac": 0.3496285645818356
+      }
+    },
+    {
+      "base": "271031",
+      "files": {
+        "E": "271031_E.jpg",
+        "T": "271031_T.jpg",
+        "X": "271031_X.jpg",
+        "N": "271031_N.jpg",
+        "C": "271031_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.01841309317944832,
+        "clipped_area_frac_T": 0.025777035122829514,
+        "clipped_area_frac_X": 0.01841309317944832,
+        "clipped_area_frac_N": 0.42298948841004913,
+        "edge_band_frac": 0.26560708803699457
+      }
+    },
+    {
+      "base": "42012",
+      "files": {
+        "E": "42012_E.jpg",
+        "T": "42012_T.jpg",
+        "X": "42012_X.jpg",
+        "N": "42012_N.jpg",
+        "C": "42012_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.04908646964721731,
+        "clipped_area_frac_T": 0.049397348462769025,
+        "clipped_area_frac_X": 0.04908646964721731,
+        "clipped_area_frac_N": 0.11697463099332259,
+        "edge_band_frac": 0.6406111359382387
+      }
+    },
+    {
+      "base": "286092",
+      "files": {
+        "E": "286092_E.jpg",
+        "T": "286092_T.jpg",
+        "X": "286092_X.jpg",
+        "N": "286092_N.jpg",
+        "C": "286092_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.05403462412808207,
+        "clipped_area_frac_T": 0.05484420437691466,
+        "clipped_area_frac_X": 0.05403462412808207,
+        "clipped_area_frac_N": 0.45644782093380226,
+        "edge_band_frac": 0.35458319570469105
+      }
+    },
+    {
+      "base": "55067",
+      "files": {
+        "E": "55067_E.jpg",
+        "T": "55067_T.jpg",
+        "X": "55067_X.jpg",
+        "N": "55067_N.jpg",
+        "C": "55067_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.023665649833874133,
+        "clipped_area_frac_T": 0.02828997221520586,
+        "clipped_area_frac_X": 0.023665649833874133,
+        "clipped_area_frac_N": 0.3115394330347601,
+        "edge_band_frac": 0.22076929553565067
+      }
+    },
+    {
+      "base": "163062",
+      "files": {
+        "E": "163062_E.jpg",
+        "T": "163062_T.jpg",
+        "X": "163062_X.jpg",
+        "N": "163062_N.jpg",
+        "C": "163062_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0018911794612729192,
+        "clipped_area_frac_T": 0.0018782261772915978,
+        "clipped_area_frac_X": 0.0018782261772915978,
+        "clipped_area_frac_N": 0.06088691135420107,
+        "edge_band_frac": 0.5527619639769172
+      }
+    },
+    {
+      "base": "274007",
+      "files": {
+        "E": "274007_E.jpg",
+        "T": "274007_T.jpg",
+        "X": "274007_X.jpg",
+        "N": "274007_N.jpg",
+        "C": "274007_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.009170925058775526,
+        "clipped_area_frac_T": 0.009138541848822223,
+        "clipped_area_frac_X": 0.009138541848822223,
+        "clipped_area_frac_N": 0.10694231254978918,
+        "edge_band_frac": 0.8598454673221029
+      }
+    },
+    {
+      "base": "302003",
+      "files": {
+        "E": "302003_E.jpg",
+        "T": "302003_T.jpg",
+        "X": "302003_X.jpg",
+        "N": "302003_N.jpg",
+        "C": "302003_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.09298514905991541,
+        "clipped_area_frac_T": 0.09312115854171929,
+        "clipped_area_frac_X": 0.09298514905991541,
+        "clipped_area_frac_N": 0.43890259778110247,
+        "edge_band_frac": 0.44644788570022215
+      }
+    },
+    {
+      "base": "249087",
+      "files": {
+        "E": "249087_E.jpg",
+        "T": "249087_T.jpg",
+        "X": "249087_X.jpg",
+        "N": "249087_N.jpg",
+        "C": "249087_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02411901477322038,
+        "clipped_area_frac_T": 0.024067201637295095,
+        "clipped_area_frac_X": 0.024067201637295095,
+        "clipped_area_frac_N": 0.28813284888051244,
+        "edge_band_frac": 0.7889003309564058
+      }
+    },
+    {
+      "base": "61086",
+      "files": {
+        "E": "61086_E.jpg",
+        "T": "61086_T.jpg",
+        "X": "61086_X.jpg",
+        "N": "61086_N.jpg",
+        "C": "61086_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0212498623713577,
+        "clipped_area_frac_T": 0.02104908646964722,
+        "clipped_area_frac_X": 0.02104908646964722,
+        "clipped_area_frac_N": 0.32771160808543986,
+        "edge_band_frac": 0.8364259298838738
+      }
+    },
+    {
+      "base": "24077",
+      "files": {
+        "E": "24077_E.jpg",
+        "T": "24077_T.jpg",
+        "X": "24077_X.jpg",
+        "N": "24077_N.jpg",
+        "C": "24077_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03407361351286585,
+        "clipped_area_frac_T": 0.02564102564102564,
+        "clipped_area_frac_X": 0.02564102564102564,
+        "clipped_area_frac_N": 0.2933465456829943,
+        "edge_band_frac": 0.6164144014611305
+      }
+    },
+    {
+      "base": "27059",
+      "files": {
+        "E": "27059_E.jpg",
+        "T": "27059_T.jpg",
+        "X": "27059_X.jpg",
+        "N": "27059_N.jpg",
+        "C": "27059_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.00968905641802838,
+        "clipped_area_frac_T": 0.009637243282103095,
+        "clipped_area_frac_X": 0.009637243282103095,
+        "clipped_area_frac_N": 0.09146313819211016,
+        "edge_band_frac": 0.6203716297174241
+      }
+    },
+    {
+      "base": "159029",
+      "files": {
+        "E": "159029_E.jpg",
+        "T": "159029_T.jpg",
+        "X": "159029_X.jpg",
+        "N": "159029_N.jpg",
+        "C": "159029_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.025025744651912877,
+        "clipped_area_frac_T": 0.024922118380062305,
+        "clipped_area_frac_X": 0.024922118380062305,
+        "clipped_area_frac_N": 0.15488241656465956,
+        "edge_band_frac": 0.7931619613862605
+      }
+    },
+    {
+      "base": "89072",
+      "files": {
+        "E": "89072_E.jpg",
+        "T": "89072_T.jpg",
+        "X": "89072_X.jpg",
+        "N": "89072_N.jpg",
+        "C": "89072_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.015077622554258069,
+        "clipped_area_frac_T": 0.014773220380697016,
+        "clipped_area_frac_X": 0.014773220380697016,
+        "clipped_area_frac_N": 0.12895641867604485,
+        "edge_band_frac": 0.7450016515437076
+      }
+    },
+    {
+      "base": "124084",
+      "files": {
+        "E": "124084_E.jpg",
+        "T": "124084_T.jpg",
+        "X": "124084_X.jpg",
+        "N": "124084_N.jpg",
+        "C": "124084_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0012046554102628868,
+        "clipped_area_frac_T": 0.0011917021262815655,
+        "clipped_area_frac_X": 0.0011917021262815655,
+        "clipped_area_frac_N": 0.07040109843848162,
+        "edge_band_frac": 0.4810914437082661
+      }
+    },
+    {
+      "base": "102061",
+      "files": {
+        "E": "102061_E.jpg",
+        "T": "102061_T.jpg",
+        "X": "102061_X.jpg",
+        "N": "102061_N.jpg",
+        "C": "102061_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.038782132240076164,
+        "clipped_area_frac_T": 0.038769178956094844,
+        "clipped_area_frac_X": 0.038769178956094844,
+        "clipped_area_frac_N": 0.31216119066586356,
+        "edge_band_frac": 0.3586634801588073
+      }
+    },
+    {
+      "base": "253036",
+      "files": {
+        "E": "253036_E.jpg",
+        "T": "253036_T.jpg",
+        "X": "253036_X.jpg",
+        "N": "253036_N.jpg",
+        "C": "253036_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03933912345127298,
+        "clipped_area_frac_T": 0.04051787229357323,
+        "clipped_area_frac_X": 0.03933912345127298,
+        "clipped_area_frac_N": 0.6994319984974191,
+        "edge_band_frac": 0.10589309654730215
+      }
+    },
+    {
+      "base": "109053",
+      "files": {
+        "E": "109053_E.jpg",
+        "T": "109053_T.jpg",
+        "X": "109053_X.jpg",
+        "N": "109053_N.jpg",
+        "C": "109053_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0010945524964216552,
+        "clipped_area_frac_T": 0.0010621692864683518,
+        "clipped_area_frac_X": 0.0010621692864683518,
+        "clipped_area_frac_N": 0.04532354065064345,
+        "edge_band_frac": 0.6190050582573947
+      }
+    },
+    {
+      "base": "65074",
+      "files": {
+        "E": "65074_E.jpg",
+        "T": "65074_T.jpg",
+        "X": "65074_X.jpg",
+        "N": "65074_N.jpg",
+        "C": "65074_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.07050472471033219,
+        "clipped_area_frac_T": 0.0703687152285283,
+        "clipped_area_frac_X": 0.0703687152285283,
+        "clipped_area_frac_N": 0.40441447918083434,
+        "edge_band_frac": 0.5280535747825468
+      }
+    },
+    {
+      "base": "106025",
+      "files": {
+        "E": "106025_E.jpg",
+        "T": "106025_T.jpg",
+        "X": "106025_X.jpg",
+        "N": "106025_N.jpg",
+        "C": "106025_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.01424213573746284,
+        "clipped_area_frac_T": 0.013503798550527522,
+        "clipped_area_frac_X": 0.013503798550527522,
+        "clipped_area_frac_N": 0.05026521848951755,
+        "edge_band_frac": 0.15112596421007635
+      }
+    },
+    {
+      "base": "87046",
+      "files": {
+        "E": "87046_E.jpg",
+        "T": "87046_T.jpg",
+        "X": "87046_X.jpg",
+        "N": "87046_N.jpg",
+        "C": "87046_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.008607457205588047,
+        "clipped_area_frac_T": 0.008516784217718797,
+        "clipped_area_frac_X": 0.008516784217718797,
+        "clipped_area_frac_N": 0.23747255522956456,
+        "edge_band_frac": 0.5569199681349214
+      }
+    },
+    {
+      "base": "103070",
+      "files": {
+        "E": "103070_E.jpg",
+        "T": "103070_T.jpg",
+        "X": "103070_X.jpg",
+        "N": "103070_N.jpg",
+        "C": "103070_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.006269389446959541,
+        "clipped_area_frac_T": 0.006204623027052934,
+        "clipped_area_frac_X": 0.006204623027052934,
+        "clipped_area_frac_N": 0.0409841905169008,
+        "edge_band_frac": 0.5583189228049041
+      }
+    },
+    {
+      "base": "176035",
+      "files": {
+        "E": "176035_E.jpg",
+        "T": "176035_T.jpg",
+        "X": "176035_X.jpg",
+        "N": "176035_N.jpg",
+        "C": "176035_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.08875590184001399,
+        "clipped_area_frac_T": 0.08998646381823952,
+        "clipped_area_frac_X": 0.08875590184001399,
+        "clipped_area_frac_N": 0.3685533124785461,
+        "edge_band_frac": 0.36594970239830055
+      }
+    },
+    {
+      "base": "86000",
+      "files": {
+        "E": "86000_E.jpg",
+        "T": "86000_T.jpg",
+        "X": "86000_X.jpg",
+        "N": "86000_N.jpg",
+        "C": "86000_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0016191604976651705,
+        "clipped_area_frac_T": 0.0016062072136838492,
+        "clipped_area_frac_X": 0.0016062072136838492,
+        "clipped_area_frac_N": 0.1379265678331099,
+        "edge_band_frac": 0.5984352432950564
+      }
+    },
+    {
+      "base": "123074",
+      "files": {
+        "E": "123074_E.jpg",
+        "T": "123074_T.jpg",
+        "X": "123074_X.jpg",
+        "N": "123074_N.jpg",
+        "C": "123074_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02305684548675203,
+        "clipped_area_frac_T": 0.022920836004948153,
+        "clipped_area_frac_X": 0.022920836004948153,
+        "clipped_area_frac_N": 0.08808880771497594,
+        "edge_band_frac": 0.7068153703667722
+      }
+    },
+    {
+      "base": "26031",
+      "files": {
+        "E": "26031_E.jpg",
+        "T": "26031_T.jpg",
+        "X": "26031_X.jpg",
+        "N": "26031_N.jpg",
+        "C": "26031_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03170316254428404,
+        "clipped_area_frac_T": 0.02494802494802495,
+        "clipped_area_frac_X": 0.02494802494802495,
+        "clipped_area_frac_N": 0.20662430942804774,
+        "edge_band_frac": 0.7562127188295412
+      }
+    },
+    {
+      "base": "254033",
+      "files": {
+        "E": "254033_E.jpg",
+        "T": "254033_T.jpg",
+        "X": "254033_X.jpg",
+        "N": "254033_N.jpg",
+        "C": "254033_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.007623007623007623,
+        "clipped_area_frac_T": 0.007512904709166391,
+        "clipped_area_frac_X": 0.007512904709166391,
+        "clipped_area_frac_N": 0.22760215283579768,
+        "edge_band_frac": 0.8059144694658713
+      }
+    },
+    {
+      "base": "249061",
+      "files": {
+        "E": "249061_E.jpg",
+        "T": "249061_T.jpg",
+        "X": "249061_X.jpg",
+        "N": "249061_N.jpg",
+        "C": "249061_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02858142110478559,
+        "clipped_area_frac_T": 0.03727307465625223,
+        "clipped_area_frac_X": 0.02858142110478559,
+        "clipped_area_frac_N": 0.49360431603422256,
+        "edge_band_frac": 0.4182097266209416
+      }
+    },
+    {
+      "base": "153077",
+      "files": {
+        "E": "153077_E.jpg",
+        "T": "153077_T.jpg",
+        "X": "153077_X.jpg",
+        "N": "153077_N.jpg",
+        "C": "153077_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.032583985855013896,
+        "clipped_area_frac_T": 0.03186507859405056,
+        "clipped_area_frac_X": 0.03186507859405056,
+        "clipped_area_frac_N": 0.13755739923964222,
+        "edge_band_frac": 0.4699775260522924
+      }
+    },
+    {
+      "base": "145086",
+      "files": {
+        "E": "145086_E.jpg",
+        "T": "145086_T.jpg",
+        "X": "145086_X.jpg",
+        "N": "145086_N.jpg",
+        "C": "145086_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.051035938886406174,
+        "clipped_area_frac_T": 0.05085459291066768,
+        "clipped_area_frac_X": 0.05085459291066768,
+        "clipped_area_frac_N": 0.13242142214104832,
+        "edge_band_frac": 0.45822242083924325
+      }
+    },
+    {
+      "base": "208001",
+      "files": {
+        "E": "208001_E.jpg",
+        "T": "208001_T.jpg",
+        "X": "208001_X.jpg",
+        "N": "208001_N.jpg",
+        "C": "208001_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.005433902630164312,
+        "clipped_area_frac_T": 0.005336753000304402,
+        "clipped_area_frac_X": 0.005336753000304402,
+        "clipped_area_frac_N": 0.07969507969507969,
+        "edge_band_frac": 0.7638227731685676
+      }
+    },
+    {
+      "base": "376001",
+      "files": {
+        "E": "376001_E.jpg",
+        "T": "376001_T.jpg",
+        "X": "376001_X.jpg",
+        "N": "376001_N.jpg",
+        "C": "376001_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0034779567489847864,
+        "clipped_area_frac_T": 0.0034131903290781796,
+        "clipped_area_frac_X": 0.0034131903290781796,
+        "clipped_area_frac_N": 0.2612353546932986,
+        "edge_band_frac": 0.8582522133924003
+      }
+    },
+    {
+      "base": "241004",
+      "files": {
+        "E": "241004_E.jpg",
+        "T": "241004_T.jpg",
+        "X": "241004_X.jpg",
+        "N": "241004_N.jpg",
+        "C": "241004_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.04436499763602567,
+        "clipped_area_frac_T": 0.11595779820078886,
+        "clipped_area_frac_X": 0.04436499763602567,
+        "clipped_area_frac_N": 0.3111832177252738,
+        "edge_band_frac": 0.4361759315030343
+      }
+    },
+    {
+      "base": "97017",
+      "files": {
+        "E": "97017_E.jpg",
+        "T": "97017_T.jpg",
+        "X": "97017_X.jpg",
+        "N": "97017_N.jpg",
+        "C": "97017_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.047234150037888355,
+        "clipped_area_frac_T": 0.04882740396759088,
+        "clipped_area_frac_X": 0.047234150037888355,
+        "clipped_area_frac_N": 0.5364537794444336,
+        "edge_band_frac": 0.3404835460910227
+      }
+    },
+    {
+      "base": "97033",
+      "files": {
+        "E": "97033_E.jpg",
+        "T": "97033_T.jpg",
+        "X": "97033_X.jpg",
+        "N": "97033_N.jpg",
+        "C": "97033_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03483785726776381,
+        "clipped_area_frac_T": 0.03480547405781051,
+        "clipped_area_frac_X": 0.03480547405781051,
+        "clipped_area_frac_N": 0.35426584024714863,
+        "edge_band_frac": 0.7610637236805461
+      }
+    },
+    {
+      "base": "48055",
+      "files": {
+        "E": "48055_E.jpg",
+        "T": "48055_T.jpg",
+        "X": "48055_X.jpg",
+        "N": "48055_N.jpg",
+        "C": "48055_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.01899599095860778,
+        "clipped_area_frac_T": 0.018451953031392285,
+        "clipped_area_frac_X": 0.018451953031392285,
+        "clipped_area_frac_N": 0.18597677476182148,
+        "edge_band_frac": 0.5500288210568585
+      }
+    },
+    {
+      "base": "55075",
+      "files": {
+        "E": "55075_E.jpg",
+        "T": "55075_T.jpg",
+        "X": "55075_X.jpg",
+        "N": "55075_N.jpg",
+        "C": "55075_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0006865240510100323,
+        "clipped_area_frac_T": 0.0006606174830473896,
+        "clipped_area_frac_X": 0.0006606174830473896,
+        "clipped_area_frac_N": 0.0666316927999171,
+        "edge_band_frac": 0.5962526149442037
+      }
+    },
+    {
+      "base": "92059",
+      "files": {
+        "E": "92059_E.jpg",
+        "T": "92059_T.jpg",
+        "X": "92059_X.jpg",
+        "N": "92059_N.jpg",
+        "C": "92059_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0008743466687391921,
+        "clipped_area_frac_T": 0.0008484401007765493,
+        "clipped_area_frac_X": 0.0008484401007765493,
+        "clipped_area_frac_N": 0.022046489336208962,
+        "edge_band_frac": 0.7359343527567827
+      }
+    },
+    {
+      "base": "65019",
+      "files": {
+        "E": "65019_E.jpg",
+        "T": "65019_T.jpg",
+        "X": "65019_X.jpg",
+        "N": "65019_N.jpg",
+        "C": "65019_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.08025854754826718,
+        "clipped_area_frac_T": 0.08006424828854736,
+        "clipped_area_frac_X": 0.08006424828854736,
+        "clipped_area_frac_N": 0.4422186384803207,
+        "edge_band_frac": 0.6786484543493889
+      }
+    },
+    {
+      "base": "157055",
+      "files": {
+        "E": "157055_E.jpg",
+        "T": "157055_T.jpg",
+        "X": "157055_X.jpg",
+        "N": "157055_N.jpg",
+        "C": "157055_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.13244732870901096,
+        "clipped_area_frac_T": 0.13231779586919773,
+        "clipped_area_frac_X": 0.13231779586919773,
+        "clipped_area_frac_N": 0.38135763369408227,
+        "edge_band_frac": 0.6225024449323515
+      }
+    },
+    {
+      "base": "311068",
+      "files": {
+        "E": "311068_E.jpg",
+        "T": "311068_T.jpg",
+        "X": "311068_X.jpg",
+        "N": "311068_N.jpg",
+        "C": "311068_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.009455897306364596,
+        "clipped_area_frac_T": 0.00938465424446733,
+        "clipped_area_frac_X": 0.00938465424446733,
+        "clipped_area_frac_N": 0.13998613998613998,
+        "edge_band_frac": 0.8602923556194584
+      }
+    },
+    {
+      "base": "310007",
+      "files": {
+        "E": "310007_E.jpg",
+        "T": "310007_T.jpg",
+        "X": "310007_X.jpg",
+        "N": "310007_N.jpg",
+        "C": "310007_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.10057577347296974,
+        "clipped_area_frac_T": 0.10398248716005726,
+        "clipped_area_frac_X": 0.10057577347296974,
+        "clipped_area_frac_N": 0.5802423559432905,
+        "edge_band_frac": 0.5593940453753538
+      }
+    },
+    {
+      "base": "16052",
+      "files": {
+        "E": "16052_E.jpg",
+        "T": "16052_T.jpg",
+        "X": "16052_X.jpg",
+        "N": "16052_N.jpg",
+        "C": "16052_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.000550514569206158,
+        "clipped_area_frac_T": 0.000550514569206158,
+        "clipped_area_frac_X": 0.000550514569206158,
+        "clipped_area_frac_N": 0.02649594238379285,
+        "edge_band_frac": 0.8456680980045466
+      }
+    },
+    {
+      "base": "166081",
+      "files": {
+        "E": "166081_E.jpg",
+        "T": "166081_T.jpg",
+        "X": "166081_X.jpg",
+        "N": "166081_N.jpg",
+        "C": "166081_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0042098172939294435,
+        "clipped_area_frac_T": 0.004145050874022837,
+        "clipped_area_frac_X": 0.004145050874022837,
+        "clipped_area_frac_N": 0.03388579089513669,
+        "edge_band_frac": 0.6203651530754335
+      }
+    },
+    {
+      "base": "38092",
+      "files": {
+        "E": "38092_E.jpg",
+        "T": "38092_T.jpg",
+        "X": "38092_X.jpg",
+        "N": "38092_N.jpg",
+        "C": "38092_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.08178703505806309,
+        "clipped_area_frac_T": 0.0841251028166916,
+        "clipped_area_frac_X": 0.08178703505806309,
+        "clipped_area_frac_N": 0.35734224519271246,
+        "edge_band_frac": 0.7145031444096864
+      }
+    },
+    {
+      "base": "76002",
+      "files": {
+        "E": "76002_E.jpg",
+        "T": "76002_T.jpg",
+        "X": "76002_X.jpg",
+        "N": "76002_N.jpg",
+        "C": "76002_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.03157362970447083,
+        "clipped_area_frac_T": 0.03169668590229338,
+        "clipped_area_frac_X": 0.03157362970447083,
+        "clipped_area_frac_N": 0.1521233670766381,
+        "edge_band_frac": 0.6191734509491519
+      }
+    },
+    {
+      "base": "210088",
+      "files": {
+        "E": "210088_E.jpg",
+        "T": "210088_T.jpg",
+        "X": "210088_X.jpg",
+        "N": "210088_N.jpg",
+        "C": "210088_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.009034915576971652,
+        "clipped_area_frac_T": 0.00902196229299033,
+        "clipped_area_frac_X": 0.00902196229299033,
+        "clipped_area_frac_N": 0.12192278547418735,
+        "edge_band_frac": 0.45074837598202083
+      }
+    },
+    {
+      "base": "65033",
+      "files": {
+        "E": "65033_E.jpg",
+        "T": "65033_T.jpg",
+        "X": "65033_X.jpg",
+        "N": "65033_N.jpg",
+        "C": "65033_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0008872999527205135,
+        "clipped_area_frac_T": 0.0008549167427672101,
+        "clipped_area_frac_X": 0.0008549167427672101,
+        "clipped_area_frac_N": 0.050725060070854464,
+        "edge_band_frac": 0.8859463345444654
+      }
+    },
+    {
+      "base": "271008",
+      "files": {
+        "E": "271008_E.jpg",
+        "T": "271008_T.jpg",
+        "X": "271008_X.jpg",
+        "N": "271008_N.jpg",
+        "C": "271008_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.18649490612107433,
+        "clipped_area_frac_T": 0.18488222226539983,
+        "clipped_area_frac_X": 0.18488222226539983,
+        "clipped_area_frac_N": 0.6243159046897364,
+        "edge_band_frac": 0.6959151818964903
+      }
+    },
+    {
+      "base": "100098",
+      "files": {
+        "E": "100098_E.jpg",
+        "T": "100098_T.jpg",
+        "X": "100098_X.jpg",
+        "N": "100098_N.jpg",
+        "C": "100098_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.04246734153276209,
+        "clipped_area_frac_T": 0.008309531674017656,
+        "clipped_area_frac_X": 0.008309531674017656,
+        "clipped_area_frac_N": 0.3102311513526467,
+        "edge_band_frac": 0.8438805448151242
+      }
+    },
+    {
+      "base": "227046",
+      "files": {
+        "E": "227046_E.jpg",
+        "T": "227046_T.jpg",
+        "X": "227046_X.jpg",
+        "N": "227046_N.jpg",
+        "C": "227046_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.026618998581615403,
+        "clipped_area_frac_T": 0.05657346778842106,
+        "clipped_area_frac_X": 0.026618998581615403,
+        "clipped_area_frac_N": 0.31587230652651216,
+        "edge_band_frac": 0.5922889100459194
+      }
+    },
+    {
+      "base": "260058",
+      "files": {
+        "E": "260058_E.jpg",
+        "T": "260058_T.jpg",
+        "X": "260058_X.jpg",
+        "N": "260058_N.jpg",
+        "C": "260058_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.041340405826387136,
+        "clipped_area_frac_T": 0.040880564245050224,
+        "clipped_area_frac_X": 0.040880564245050224,
+        "clipped_area_frac_N": 0.44782741044423285,
+        "edge_band_frac": 0.7106884022771873
+      }
+    },
+    {
+      "base": "78019",
+      "files": {
+        "E": "78019_E.jpg",
+        "T": "78019_T.jpg",
+        "X": "78019_X.jpg",
+        "N": "78019_N.jpg",
+        "C": "78019_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.01329654600682638,
+        "clipped_area_frac_T": 0.012506395683965778,
+        "clipped_area_frac_X": 0.012506395683965778,
+        "clipped_area_frac_N": 0.1648888284402303,
+        "edge_band_frac": 0.6601770713920246
+      }
+    },
+    {
+      "base": "372047",
+      "files": {
+        "E": "372047_E.jpg",
+        "T": "372047_T.jpg",
+        "X": "372047_X.jpg",
+        "N": "372047_N.jpg",
+        "C": "372047_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.028056813103542074,
+        "clipped_area_frac_T": 0.027674691226093097,
+        "clipped_area_frac_X": 0.027674691226093097,
+        "clipped_area_frac_N": 0.25169526104105544,
+        "edge_band_frac": 0.7357853899909975
+      }
+    },
+    {
+      "base": "374067",
+      "files": {
+        "E": "374067_E.jpg",
+        "T": "374067_T.jpg",
+        "X": "374067_X.jpg",
+        "N": "374067_N.jpg",
+        "C": "374067_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.007234409103567982,
+        "clipped_area_frac_T": 0.0071307828317174115,
+        "clipped_area_frac_X": 0.0071307828317174115,
+        "clipped_area_frac_N": 0.13218826302938452,
+        "edge_band_frac": 0.7247945285328463
+      }
+    },
+    {
+      "base": "147091",
+      "files": {
+        "E": "147091_E.jpg",
+        "T": "147091_T.jpg",
+        "X": "147091_X.jpg",
+        "N": "147091_N.jpg",
+        "C": "147091_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.029857319576945745,
+        "clipped_area_frac_T": 0.03009695533060019,
+        "clipped_area_frac_X": 0.029857319576945745,
+        "clipped_area_frac_N": 0.5001651543707618,
+        "edge_band_frac": 0.3631064565644005
+      }
+    },
+    {
+      "base": "187029",
+      "files": {
+        "E": "187029_E.jpg",
+        "T": "187029_T.jpg",
+        "X": "187029_X.jpg",
+        "N": "187029_N.jpg",
+        "C": "187029_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.010032318443533398,
+        "clipped_area_frac_T": 0.009993458591589432,
+        "clipped_area_frac_X": 0.009993458591589432,
+        "clipped_area_frac_N": 0.04226656563105161,
+        "edge_band_frac": 0.4712275179564899
+      }
+    },
+    {
+      "base": "66053",
+      "files": {
+        "E": "66053_E.jpg",
+        "T": "66053_T.jpg",
+        "X": "66053_X.jpg",
+        "N": "66053_N.jpg",
+        "C": "66053_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.006729231028296449,
+        "clipped_area_frac_T": 0.0065608383365392715,
+        "clipped_area_frac_X": 0.0065608383365392715,
+        "clipped_area_frac_N": 0.08746057344188185,
+        "edge_band_frac": 0.8553506777805843
+      }
+    },
+    {
+      "base": "95006",
+      "files": {
+        "E": "95006_E.jpg",
+        "T": "95006_T.jpg",
+        "X": "95006_X.jpg",
+        "N": "95006_N.jpg",
+        "C": "95006_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0007059539769820143,
+        "clipped_area_frac_T": 0.0006994773349913537,
+        "clipped_area_frac_X": 0.0006994773349913537,
+        "clipped_area_frac_N": 0.13692916496654814,
+        "edge_band_frac": 0.8134532807430004
+      }
+    },
+    {
+      "base": "242078",
+      "files": {
+        "E": "242078_E.jpg",
+        "T": "242078_T.jpg",
+        "X": "242078_X.jpg",
+        "N": "242078_N.jpg",
+        "C": "242078_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0988853699134073,
+        "clipped_area_frac_T": 0.09872345386364077,
+        "clipped_area_frac_X": 0.09872345386364077,
+        "clipped_area_frac_N": 0.3177181494938504,
+        "edge_band_frac": 0.6371590857572166
+      }
+    },
+    {
+      "base": "61060",
+      "files": {
+        "E": "61060_E.jpg",
+        "T": "61060_T.jpg",
+        "X": "61060_X.jpg",
+        "N": "61060_N.jpg",
+        "C": "61060_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.21772527380004014,
+        "clipped_area_frac_T": 0.21756335775027363,
+        "clipped_area_frac_X": 0.21756335775027363,
+        "clipped_area_frac_N": 0.7148269765092194,
+        "edge_band_frac": 0.5414602237032143
+      }
+    },
+    {
+      "base": "388016",
+      "files": {
+        "E": "388016_E.jpg",
+        "T": "388016_T.jpg",
+        "X": "388016_X.jpg",
+        "N": "388016_N.jpg",
+        "C": "388016_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.005388566136229687,
+        "clipped_area_frac_T": 0.00532379971632308,
+        "clipped_area_frac_X": 0.00532379971632308,
+        "clipped_area_frac_N": 0.11826348274946406,
+        "edge_band_frac": 0.7119124876134222
+      }
+    },
+    {
+      "base": "101087",
+      "files": {
+        "E": "101087_E.jpg",
+        "T": "101087_T.jpg",
+        "X": "101087_X.jpg",
+        "N": "101087_N.jpg",
+        "C": "101087_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.06909281675636816,
+        "clipped_area_frac_T": 0.20503105549834522,
+        "clipped_area_frac_X": 0.06909281675636816,
+        "clipped_area_frac_N": 0.3519018659205575,
+        "edge_band_frac": 0.4833712216889787
+      }
+    },
+    {
+      "base": "135037",
+      "files": {
+        "E": "135037_E.jpg",
+        "T": "135037_T.jpg",
+        "X": "135037_X.jpg",
+        "N": "135037_N.jpg",
+        "C": "135037_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.12264169273515067,
+        "clipped_area_frac_T": 0.12235024384557094,
+        "clipped_area_frac_X": 0.12235024384557094,
+        "clipped_area_frac_N": 0.2968957454938763,
+        "edge_band_frac": 0.3963186766925085
+      }
+    },
+    {
+      "base": "106020",
+      "files": {
+        "E": "106020_E.jpg",
+        "T": "106020_T.jpg",
+        "X": "106020_X.jpg",
+        "N": "106020_N.jpg",
+        "C": "106020_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.024902688454090324,
+        "clipped_area_frac_T": 0.024358650526874828,
+        "clipped_area_frac_X": 0.024358650526874828,
+        "clipped_area_frac_N": 0.09616518027732981,
+        "edge_band_frac": 0.5814470113535534
+      }
+    },
+    {
+      "base": "216066",
+      "files": {
+        "E": "216066_E.jpg",
+        "T": "216066_T.jpg",
+        "X": "216066_X.jpg",
+        "N": "216066_N.jpg",
+        "C": "216066_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.007091922979773447,
+        "clipped_area_frac_T": 0.006955913497969573,
+        "clipped_area_frac_X": 0.006955913497969573,
+        "clipped_area_frac_N": 0.07483759820208419,
+        "edge_band_frac": 0.8703052441370198
+      }
+    },
+    {
+      "base": "105025",
+      "files": {
+        "E": "105025_E.jpg",
+        "T": "105025_T.jpg",
+        "X": "105025_X.jpg",
+        "N": "105025_N.jpg",
+        "C": "105025_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.21036133185665895,
+        "clipped_area_frac_T": 0.2100115931891633,
+        "clipped_area_frac_X": 0.2100115931891633,
+        "clipped_area_frac_N": 0.559445858511279,
+        "edge_band_frac": 0.733350172602509
+      }
+    },
+    {
+      "base": "241048",
+      "files": {
+        "E": "241048_E.jpg",
+        "T": "241048_T.jpg",
+        "X": "241048_X.jpg",
+        "N": "241048_N.jpg",
+        "C": "241048_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.11554329311338657,
+        "clipped_area_frac_T": 0.1153230872857041,
+        "clipped_area_frac_X": 0.1153230872857041,
+        "clipped_area_frac_N": 0.42766562392730617,
+        "edge_band_frac": 0.7854871406273275
+      }
+    },
+    {
+      "base": "187003",
+      "files": {
+        "E": "187003_E.jpg",
+        "T": "187003_T.jpg",
+        "X": "187003_X.jpg",
+        "N": "187003_N.jpg",
+        "C": "187003_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.059649872733984886,
+        "clipped_area_frac_T": 0.05937137712838647,
+        "clipped_area_frac_X": 0.05937137712838647,
+        "clipped_area_frac_N": 0.14537470612236966,
+        "edge_band_frac": 0.5973860272925694
+      }
+    },
+    {
+      "base": "65132",
+      "files": {
+        "E": "65132_E.jpg",
+        "T": "65132_T.jpg",
+        "X": "65132_X.jpg",
+        "N": "65132_N.jpg",
+        "C": "65132_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0019106093872449013,
+        "clipped_area_frac_T": 0.0008872999527205135,
+        "clipped_area_frac_X": 0.0008872999527205135,
+        "clipped_area_frac_N": 0.15920233677243023,
+        "edge_band_frac": 0.7254421927319123
+      }
+    },
+    {
+      "base": "117054",
+      "files": {
+        "E": "117054_E.jpg",
+        "T": "117054_T.jpg",
+        "X": "117054_X.jpg",
+        "N": "117054_N.jpg",
+        "C": "117054_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.09972733337219318,
+        "clipped_area_frac_T": 0.10086722236254947,
+        "clipped_area_frac_X": 0.09972733337219318,
+        "clipped_area_frac_N": 0.3009371700960486,
+        "edge_band_frac": 0.5681245587787643
+      }
+    },
+    {
+      "base": "260081",
+      "files": {
+        "E": "260081_E.jpg",
+        "T": "260081_T.jpg",
+        "X": "260081_X.jpg",
+        "N": "260081_N.jpg",
+        "C": "260081_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.008426111229849547,
+        "clipped_area_frac_T": 0.008316008316008316,
+        "clipped_area_frac_X": 0.008316008316008316,
+        "clipped_area_frac_N": 0.10839955699768784,
+        "edge_band_frac": 0.5531635157803382
+      }
+    },
+    {
+      "base": "151087",
+      "files": {
+        "E": "151087_E.jpg",
+        "T": "151087_T.jpg",
+        "X": "151087_X.jpg",
+        "N": "151087_N.jpg",
+        "C": "151087_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0019235626712262226,
+        "clipped_area_frac_T": 0.0019106093872449013,
+        "clipped_area_frac_X": 0.0019106093872449013,
+        "clipped_area_frac_N": 0.1550054727624821,
+        "edge_band_frac": 0.607910570527393
+      }
+    },
+    {
+      "base": "196015",
+      "files": {
+        "E": "196015_E.jpg",
+        "T": "196015_T.jpg",
+        "X": "196015_X.jpg",
+        "N": "196015_N.jpg",
+        "C": "196015_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0009455897306364596,
+        "clipped_area_frac_T": 0.0009455897306364596,
+        "clipped_area_frac_X": 0.0009455897306364596,
+        "clipped_area_frac_N": 0.02477963225626777,
+        "edge_band_frac": 0.4701135355340963
+      }
+    },
+    {
+      "base": "311081",
+      "files": {
+        "E": "311081_E.jpg",
+        "T": "311081_T.jpg",
+        "X": "311081_X.jpg",
+        "N": "311081_N.jpg",
+        "C": "311081_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.004669658875266352,
+        "clipped_area_frac_T": 0.0046437523073037095,
+        "clipped_area_frac_X": 0.0046437523073037095,
+        "clipped_area_frac_N": 0.30185037661673175,
+        "edge_band_frac": 0.9554342264622638
+      }
+    },
+    {
+      "base": "76053",
+      "files": {
+        "E": "76053_E.jpg",
+        "T": "76053_T.jpg",
+        "X": "76053_X.jpg",
+        "N": "76053_N.jpg",
+        "C": "76053_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.00921626155271015,
+        "clipped_area_frac_T": 0.009170925058775526,
+        "clipped_area_frac_X": 0.009170925058775526,
+        "clipped_area_frac_N": 0.04742197265561752,
+        "edge_band_frac": 0.8475722307498008
+      }
+    },
+    {
+      "base": "231015",
+      "files": {
+        "E": "231015_E.jpg",
+        "T": "231015_T.jpg",
+        "X": "231015_X.jpg",
+        "N": "231015_N.jpg",
+        "C": "231015_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.10911198761666051,
+        "clipped_area_frac_T": 0.10906665112272589,
+        "clipped_area_frac_X": 0.10906665112272589,
+        "clipped_area_frac_N": 0.2733855350677781,
+        "edge_band_frac": 0.815616479167881
+      }
+    },
+    {
+      "base": "138078",
+      "files": {
+        "E": "138078_E.jpg",
+        "T": "138078_T.jpg",
+        "X": "138078_X.jpg",
+        "N": "138078_N.jpg",
+        "C": "138078_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.09145018490812884,
+        "clipped_area_frac_T": 0.11093840065802682,
+        "clipped_area_frac_X": 0.09145018490812884,
+        "clipped_area_frac_N": 0.3487024047771711,
+        "edge_band_frac": 0.6038950524931833
+      }
+    },
+    {
+      "base": "188005",
+      "files": {
+        "E": "188005_E.jpg",
+        "T": "188005_T.jpg",
+        "X": "188005_X.jpg",
+        "N": "188005_N.jpg",
+        "C": "188005_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0004015518034209623,
+        "clipped_area_frac_T": 0.0003885985194396409,
+        "clipped_area_frac_X": 0.0003885985194396409,
+        "clipped_area_frac_N": 0.036748466655008714,
+        "edge_band_frac": 0.7149241261390794
+      }
+    },
+    {
+      "base": "159008",
+      "files": {
+        "E": "159008_E.jpg",
+        "T": "159008_T.jpg",
+        "X": "159008_X.jpg",
+        "N": "159008_N.jpg",
+        "C": "159008_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.026359932901988976,
+        "clipped_area_frac_T": 0.02619801685222246,
+        "clipped_area_frac_X": 0.02619801685222246,
+        "clipped_area_frac_N": 0.19804275879042235,
+        "edge_band_frac": 0.7580197019449356
+      }
+    },
+    {
+      "base": "253055",
+      "files": {
+        "E": "253055_E.jpg",
+        "T": "253055_T.jpg",
+        "X": "253055_X.jpg",
+        "N": "253055_N.jpg",
+        "C": "253055_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.05332867015110006,
+        "clipped_area_frac_T": 0.15152751601349732,
+        "clipped_area_frac_X": 0.05332867015110006,
+        "clipped_area_frac_N": 0.5506635319719432,
+        "edge_band_frac": 0.3537153256779425
+      }
+    },
+    {
+      "base": "8023",
+      "files": {
+        "E": "8023_E.jpg",
+        "T": "8023_T.jpg",
+        "X": "8023_X.jpg",
+        "N": "8023_N.jpg",
+        "C": "8023_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0035362465269007325,
+        "clipped_area_frac_T": 0.0035362465269007325,
+        "clipped_area_frac_X": 0.0035362465269007325,
+        "clipped_area_frac_N": 0.03966295555080602,
+        "edge_band_frac": 0.345250354596149
+      }
+    },
+    {
+      "base": "147062",
+      "files": {
+        "E": "147062_E.jpg",
+        "T": "147062_T.jpg",
+        "X": "147062_X.jpg",
+        "N": "147062_N.jpg",
+        "C": "147062_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.001936515955207544,
+        "clipped_area_frac_T": 0.0006476641990660683,
+        "clipped_area_frac_X": 0.0006476641990660683,
+        "clipped_area_frac_N": 0.22326280270205504,
+        "edge_band_frac": 0.8772676342769801
+      }
+    },
+    {
+      "base": "374020",
+      "files": {
+        "E": "374020_E.jpg",
+        "T": "374020_T.jpg",
+        "X": "374020_X.jpg",
+        "N": "374020_N.jpg",
+        "C": "374020_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0007771970388792818,
+        "clipped_area_frac_T": 0.0009132065206831562,
+        "clipped_area_frac_X": 0.0007771970388792818,
+        "clipped_area_frac_N": 0.025925997888614712,
+        "edge_band_frac": 0.6730655889534394
+      }
+    },
+    {
+      "base": "85048",
+      "files": {
+        "E": "85048_E.jpg",
+        "T": "85048_T.jpg",
+        "X": "85048_X.jpg",
+        "N": "85048_N.jpg",
+        "C": "85048_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.012040077460638208,
+        "clipped_area_frac_T": 0.010893711828291268,
+        "clipped_area_frac_X": 0.010893711828291268,
+        "clipped_area_frac_N": 0.3421869029345665,
+        "edge_band_frac": 0.8467108373650429
+      }
+    },
+    {
+      "base": "296059",
+      "files": {
+        "E": "296059_E.jpg",
+        "T": "296059_T.jpg",
+        "X": "296059_X.jpg",
+        "N": "296059_N.jpg",
+        "C": "296059_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0019300393132168833,
+        "clipped_area_frac_T": 0.001917086029235562,
+        "clipped_area_frac_X": 0.001917086029235562,
+        "clipped_area_frac_N": 0.10057577347296974,
+        "edge_band_frac": 0.5459161533927889
+      }
+    },
+    {
+      "base": "45096",
+      "files": {
+        "E": "45096_E.jpg",
+        "T": "45096_T.jpg",
+        "X": "45096_X.jpg",
+        "N": "45096_N.jpg",
+        "C": "45096_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.008588027279616064,
+        "clipped_area_frac_T": 0.00929398125659808,
+        "clipped_area_frac_X": 0.008588027279616064,
+        "clipped_area_frac_N": 0.04314091229979081,
+        "edge_band_frac": 0.1956140180439246
+      }
+    },
+    {
+      "base": "25098",
+      "files": {
+        "E": "25098_E.jpg",
+        "T": "25098_T.jpg",
+        "X": "25098_X.jpg",
+        "N": "25098_N.jpg",
+        "C": "25098_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02214363896606887,
+        "clipped_area_frac_T": 0.022085349188152928,
+        "clipped_area_frac_X": 0.022085349188152928,
+        "clipped_area_frac_N": 0.28717430586589465,
+        "edge_band_frac": 0.7229227789975453
+      }
+    },
+    {
+      "base": "45077",
+      "files": {
+        "E": "45077_E.jpg",
+        "T": "45077_T.jpg",
+        "X": "45077_X.jpg",
+        "N": "45077_N.jpg",
+        "C": "45077_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0008808233107298527,
+        "clipped_area_frac_T": 0.0008743466687391921,
+        "clipped_area_frac_X": 0.0008743466687391921,
+        "clipped_area_frac_N": 0.05301779133554835,
+        "edge_band_frac": 0.8146967960052072
+      }
+    },
+    {
+      "base": "155060",
+      "files": {
+        "E": "155060_E.jpg",
+        "T": "155060_T.jpg",
+        "X": "155060_X.jpg",
+        "N": "155060_N.jpg",
+        "C": "155060_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.06873012480489116,
+        "clipped_area_frac_T": 0.07058892105621077,
+        "clipped_area_frac_X": 0.06873012480489116,
+        "clipped_area_frac_N": 0.27139720597664524,
+        "edge_band_frac": 0.7553513254447833
+      }
+    },
+    {
+      "base": "126007",
+      "files": {
+        "E": "126007_E.jpg",
+        "T": "126007_T.jpg",
+        "X": "126007_X.jpg",
+        "N": "126007_N.jpg",
+        "C": "126007_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.003944274972312356,
+        "clipped_area_frac_T": 0.003380807119124876,
+        "clipped_area_frac_X": 0.003380807119124876,
+        "clipped_area_frac_N": 0.0397147686867313,
+        "edge_band_frac": 0.46515890441124086
+      }
+    },
+    {
+      "base": "33039",
+      "files": {
+        "E": "33039_E.jpg",
+        "T": "33039_T.jpg",
+        "X": "33039_X.jpg",
+        "N": "33039_N.jpg",
+        "C": "33039_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0010297860765150484,
+        "clipped_area_frac_T": 0.0005440379272154973,
+        "clipped_area_frac_X": 0.0005440379272154973,
+        "clipped_area_frac_N": 0.16486292187226767,
+        "edge_band_frac": 0.934780215154047
+      }
+    },
+    {
+      "base": "170057",
+      "files": {
+        "E": "170057_E.jpg",
+        "T": "170057_T.jpg",
+        "X": "170057_X.jpg",
+        "N": "170057_N.jpg",
+        "C": "170057_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0009391130886457989,
+        "clipped_area_frac_T": 0.0008872999527205135,
+        "clipped_area_frac_X": 0.0008872999527205135,
+        "clipped_area_frac_N": 0.05915117130070401,
+        "edge_band_frac": 0.5246274311694873
+      }
+    },
+    {
+      "base": "90076",
+      "files": {
+        "E": "90076_E.jpg",
+        "T": "90076_T.jpg",
+        "X": "90076_X.jpg",
+        "N": "90076_N.jpg",
+        "C": "90076_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.031839172026087915,
+        "clipped_area_frac_T": 0.03162544284039611,
+        "clipped_area_frac_X": 0.03162544284039611,
+        "clipped_area_frac_N": 0.08847092959242492,
+        "edge_band_frac": 0.3154124649451752
+      }
+    },
+    {
+      "base": "181018",
+      "files": {
+        "E": "181018_E.jpg",
+        "T": "181018_T.jpg",
+        "X": "181018_X.jpg",
+        "N": "181018_N.jpg",
+        "C": "181018_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.025466156307277804,
+        "clipped_area_frac_T": 0.02478610889825843,
+        "clipped_area_frac_X": 0.02478610889825843,
+        "clipped_area_frac_N": 0.10856147304745435,
+        "edge_band_frac": 0.30852131786711223
+      }
+    },
+    {
+      "base": "198054",
+      "files": {
+        "E": "198054_E.jpg",
+        "T": "198054_T.jpg",
+        "X": "198054_X.jpg",
+        "N": "198054_N.jpg",
+        "C": "198054_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.012746031437620223,
+        "clipped_area_frac_T": 0.01272012486965758,
+        "clipped_area_frac_X": 0.01272012486965758,
+        "clipped_area_frac_N": 0.1325574316228522,
+        "edge_band_frac": 0.5076521525119656
+      }
+    },
+    {
+      "base": "189011",
+      "files": {
+        "E": "189011_E.jpg",
+        "T": "189011_T.jpg",
+        "X": "189011_X.jpg",
+        "N": "189011_N.jpg",
+        "C": "189011_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.043808006424828856,
+        "clipped_area_frac_T": 0.04394401590663273,
+        "clipped_area_frac_X": 0.043808006424828856,
+        "clipped_area_frac_N": 0.4291228683752048,
+        "edge_band_frac": 0.2264493105614601
+      }
+    },
+    {
+      "base": "103041",
+      "files": {
+        "E": "103041_E.jpg",
+        "T": "103041_T.jpg",
+        "X": "103041_X.jpg",
+        "N": "103041_N.jpg",
+        "C": "103041_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0021696750668713286,
+        "clipped_area_frac_T": 0.002163198424880668,
+        "clipped_area_frac_X": 0.002163198424880668,
+        "clipped_area_frac_N": 0.0343780156864269,
+        "edge_band_frac": 0.5058386927545806
+      }
+    },
+    {
+      "base": "33066",
+      "files": {
+        "E": "33066_E.jpg",
+        "T": "33066_T.jpg",
+        "X": "33066_X.jpg",
+        "N": "33066_N.jpg",
+        "C": "33066_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.010932571680235231,
+        "clipped_area_frac_T": 0.011075057804029767,
+        "clipped_area_frac_X": 0.010932571680235231,
+        "clipped_area_frac_N": 0.0466836354686822,
+        "edge_band_frac": 0.60680306474699
+      }
+    },
+    {
+      "base": "68077",
+      "files": {
+        "E": "68077_E.jpg",
+        "T": "68077_T.jpg",
+        "X": "68077_X.jpg",
+        "N": "68077_N.jpg",
+        "C": "68077_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.02461123956451059,
+        "clipped_area_frac_T": 0.024539996502613324,
+        "clipped_area_frac_X": 0.024539996502613324,
+        "clipped_area_frac_N": 0.23225238178509205,
+        "edge_band_frac": 0.43149331934378665
+      }
+    },
+    {
+      "base": "153093",
+      "files": {
+        "E": "153093_E.jpg",
+        "T": "153093_T.jpg",
+        "X": "153093_X.jpg",
+        "N": "153093_N.jpg",
+        "C": "153093_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0007836736808699426,
+        "clipped_area_frac_T": 0.0007836736808699426,
+        "clipped_area_frac_X": 0.0007836736808699426,
+        "clipped_area_frac_N": 0.10614568558493792,
+        "edge_band_frac": 0.6307731167544252
+      }
+    },
+    {
+      "base": "55073",
+      "files": {
+        "E": "55073_E.jpg",
+        "T": "55073_T.jpg",
+        "X": "55073_X.jpg",
+        "N": "55073_N.jpg",
+        "C": "55073_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0021049086469647218,
+        "clipped_area_frac_T": 0.0020725254370114183,
+        "clipped_area_frac_X": 0.0020725254370114183,
+        "clipped_area_frac_N": 0.07113295898342627,
+        "edge_band_frac": 0.8494828401370458
+      }
+    },
+    {
+      "base": "323016",
+      "files": {
+        "E": "323016_E.jpg",
+        "T": "323016_T.jpg",
+        "X": "323016_X.jpg",
+        "N": "323016_N.jpg",
+        "C": "323016_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.09138541848822222,
+        "clipped_area_frac_T": 0.08890486460579919,
+        "clipped_area_frac_X": 0.08890486460579919,
+        "clipped_area_frac_N": 0.3455482801277194,
+        "edge_band_frac": 0.4947701115925415
+      }
+    },
+    {
+      "base": "317080",
+      "files": {
+        "E": "317080_E.jpg",
+        "T": "317080_T.jpg",
+        "X": "317080_X.jpg",
+        "N": "317080_N.jpg",
+        "C": "317080_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.014766743738706355,
+        "clipped_area_frac_T": 0.009559523578215167,
+        "clipped_area_frac_X": 0.009559523578215167,
+        "clipped_area_frac_N": 0.12492147071586324,
+        "edge_band_frac": 0.5209033620248573
+      }
+    },
+    {
+      "base": "202012",
+      "files": {
+        "E": "202012_E.jpg",
+        "T": "202012_T.jpg",
+        "X": "202012_X.jpg",
+        "N": "202012_N.jpg",
+        "C": "202012_C.jpg"
+      },
+      "meta": {
+        "clipped_area_frac_E": 0.0012888517561414758,
+        "clipped_area_frac_T": 0.0012694218301694937,
+        "clipped_area_frac_X": 0.0012694218301694937,
+        "clipped_area_frac_N": 0.09905376260516448,
+        "edge_band_frac": 0.9400003885985194
+      }
+    }
+  ]
+}

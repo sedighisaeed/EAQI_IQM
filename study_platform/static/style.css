@@ -1,0 +1,59 @@
+/* E-AQI study platform styles (no external fonts/CDNs) */
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px 12px;
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: #eef1f4; color: #1f2937; line-height: 1.5;
+}
+.card {
+  max-width: 760px; margin: 0 auto; background: #fff;
+  border-radius: 10px; padding: 28px 34px;
+  box-shadow: 0 2px 10px rgba(15, 23, 42, .08);
+}
+.card.wide { max-width: 980px; }
+h1 { font-size: 1.5rem; margin: .2em 0 .4em; }
+h2 { font-size: 1.1rem; margin: 1.1em 0 .3em; }
+.muted { color: #6b7280; font-size: .92em; }
+.error { color: #b91c1c; }
+button {
+  font: inherit; padding: 9px 22px; border-radius: 8px;
+  border: 1px solid #cbd5e1; background: #f8fafc; cursor: pointer;
+}
+button.primary { background: #1d4ed8; border-color: #1d4ed8; color: #fff; }
+button.primary:disabled { background: #93a7e8; border-color: #93a7e8; cursor: wait; }
+button:hover { filter: brightness(.97); }
+label { display: block; margin: .6em 0; }
+input[type=checkbox] { transform: scale(1.25); margin-right: 8px; }
+.consent-line { display: flex; align-items: flex-start; margin: 1em 0; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 18px; }
+select, input[type=number] {
+  font: inherit; padding: 6px 8px; border: 1px solid #cbd5e1;
+  border-radius: 6px; width: 100%;
+}
+.acuity-box { border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; background: #fafafa; }
+.acuity-row { display: flex; flex-direction: column; gap: 6px; margin-bottom: 10px; }
+.landolt { display: flex; align-items: center; }
+.seg { background: #111827; display: inline-block; }
+.btn-row { display: flex; gap: 10px; margin: 8px 0; }
+.scale-demo { display: flex; align-items: center; gap: 12px; margin: 12px 0; }
+.scale-bar { flex: 1; height: 10px; border-radius: 5px;
+  background: linear-gradient(90deg, #dbeafe, #1d4ed8); }
+blockquote {
+  border-left: 4px solid #1d4ed8; margin: 1em 0; padding: 6px 14px;
+  background: #eff6ff; border-radius: 0 6px 6px 0;
+}
+/* rating page */
+.topbar { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+.progressbar { flex: 1; height: 8px; background: #e5e7eb; border-radius: 4px; overflow: hidden; }
+#progress-fill { height: 100%; width: 0%; background: #1d4ed8; transition: width .2s; }
+.imgwrap { text-align: center; margin: 8px 0 16px; }
+#stim { max-width: 100%; max-height: 62vh; border: 1px solid #e5e7eb; border-radius: 4px; }
+#question { text-align: center; font-weight: 500; }
+.rating-area { display: flex; align-items: center; gap: 16px; max-width: 640px; margin: 10px auto; }
+.anchor { text-align: center; font-size: .95em; color: #374151; min-width: 70px; }
+.anchor small { color: #9ca3af; }
+#slider { flex: 1; accent-color: #1d4ed8; height: 34px; }
+.score-readout { text-align: center; margin-bottom: 12px; }
+kbd { background:#f1f5f9; border:1px solid #cbd5e1; border-radius:4px; padding:1px 6px; }
+#hint, .topbar { font-size: .9em; }
+#btn-next { display: block; margin: 4px auto 0; }

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>E-AQI Study — Admin</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<main class="card wide">
+  <h1>Study Dashboard</h1>
+  <p class="muted">
+    <a id="exp-json" href="#">export.json</a> ·
+    <a id="exp-csv" href="#">export.csv</a> ·
+    <span id="refresh-lab"></span>
+  </p>
+  <h2>Participants</h2>
+  <table id="tbl" class="admin-table">
+    <thead><tr>
+      <th>ID</th><th>registered</th><th>ratings</th><th>progress</th>
+      <th>finished</th><th>median RT (ms)</th><th>repeat consistency</th><th></th>
+    </tr></thead>
+    <tbody></tbody>
+  </table>
+</main>
+<script>
+const params = new URLSearchParams(location.search);
+const token = params.get("token") || "";
+const $ = (s) => document.querySelector(s);
+$("#exp-json").href = `/admin/export.json?token=${token}`;
+$("#exp-csv").href = `/admin/export.csv?token=${token}`;
+
+async function load() {
+  const r = await fetch(`/admin/export.json?token=${token}`);
+  if (r.status !== 200) { document.body.innerHTML = "<p>bad token</p>"; return; }
+  const data = await r.json();
+  const ratings = data.ratings;
+  const byP = {};
+  ratings.forEach(x => (byP[x.participant] = byP[x.participant] || []).push(x));
+  const tb = $("table tbody");
+  tb.innerHTML = "";
+  for (const p of data.participants) {
+    const rs = byP[p.id] || [];
+    const main = rs.filter(x => !x.is_repeat);
+    const reps = rs.filter(x => x.is_repeat);
+    // repeat consistency: |rating - original rating of same base+cond| <= 15
+    const orig = {};
+    main.forEach(x => orig[x.base + "|" + x.cond] = x.rating);
+    let ok = 0, tot = 0;
+    reps.forEach(x => {
+      const o = orig[x.base + "|" + x.cond.replace(/R$/, "")];
+      if (o !== undefined && x.rating !== null) {
+        tot++; if (Math.abs(o - x.rating) <= 15) ok++;
+      }
+    });
+    const cons = tot ? Math.round(100 * ok / tot) + "%" : "—";
+    const rts = main.filter(x => x.rt_ms > 0).map(x => x.rt_ms).sort((a, b) => a - b);
+    const med = rts.length ? rts[Math.floor(rts.length / 2)] : "—";
+    const nTotal = Object.keys(data.manifest.stimuli).length * 5 + 20; // approx
+    const tr = document.createElement("tr");
+    tr.innerHTML = `
+      <td>${p.id}</td>
+      <td>${new Date(p.created_at * 1000).toLocaleString()}</td>
+      <td>${main.length}</td>
+      <td>${main.length}/${nTotal}</td>
+      <td>${p.finished ? "✔" : "…"}</td>
+      <td>${med}</td>
+      <td>${cons}</td>
+      <td><button data-p="${p.id}">withdraw</button></td>`;
+    tb.appendChild(tr);
+  }
+  tb.querySelectorAll("button").forEach(b => b.onclick = async () => {
+    if (!confirm("Withdraw " + b.dataset.p + "?")) return;
+    await fetch(`/admin/reset?token=${token}`, {
+      method: "POST", headers: {"Content-Type": "application/json"},
+      body: JSON.stringify({participant: b.dataset.p})});
+    load();
+  });
+  $("#refresh-lab").textContent = "updated " + new Date().toLocaleTimeString();
+}
+load();
+setInterval(load, 15000);
+</script>
+</body>
+</html>

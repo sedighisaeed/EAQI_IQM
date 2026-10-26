@@ -1,0 +1,57 @@
+{
+  "n_seeds": 1,
+  "args": {
+    "data_root": "data\\koniq10k",
+    "out": "../results",
+    "epochs": 12,
+    "batch": 16,
+    "lr": 0.0002,
+    "workers": 4,
+    "resize": [
+      256,
+      192
+    ],
+    "seeds": [
+      0
+    ],
+    "device": "cuda",
+    "save_checkpoint": true
+  },
+  "per_seed": {
+    "0": {
+      "srcc": 0.697329762429378,
+      "krcc": 0.5046328902244568,
+      "plcc": 0.742361735478477,
+      "rmse": 0.12381934288875872,
+      "logistic_params": [
+        0.8645779582698242,
+        0.23153006556968384,
+        0.5475003398099857,
+        0.13520057082740525
+      ],
+      "n_params_M": 0.4327,
+      "train_seconds": 2771.7,
+      "target_scale": {
+        "raw_min": 3.91176470588,
+        "raw_max": 88.3888888889,
+        "note": "SRCC/KRCC/PLCC/RMSE on normalized [0,1] targets"
+      }
+    }
+  },
+  "srcc": {
+    "mean": 0.697329762429378,
+    "sd": NaN
+  },
+  "krcc": {
+    "mean": 0.5046328902244568,
+    "sd": NaN
+  },
+  "plcc": {
+    "mean": 0.742361735478477,
+    "sd": NaN
+  },
+  "rmse": {
+    "mean": 0.12381934288875872,
+    "sd": NaN
+  }
+}

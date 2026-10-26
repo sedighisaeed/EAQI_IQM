@@ -1,0 +1,15 @@
+{
+  "n_pairs": 126,
+  "median_observers_per_pair": 51.0,
+  "pair_mean_T_minus_E": {
+    "median": 6.186274509803921,
+    "iqr": [
+      -1.7401960784313726,
+      11.857843137254902
+    ],
+    "min": -21.176470588235293,
+    "max": 32.6078431372549,
+    "pct_pairs_positive": 66.66666666666666
+  },
+  "note": "pair-level effect = mean over observers of (T - E) per base image; stability summary over the 126 matched pairs"
+}
